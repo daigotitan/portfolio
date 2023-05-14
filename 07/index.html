@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+  <title>色彩検定テスト</title>
+</head>
+<body>
+  <header>
+    <h1>色彩検定テスト</h1>
+  </header>
+  <main>
+    <h2>慣用色名の4択テスト</h2>
+    <p class="mt20">外部JSONファイルからランダムで問題が出題されるので回答してください</p>
+    <section>
+      <div class="area_1 visible">
+        <p class="text_1">慣用色名のカラーコードは必ずしも一致しません。<br>
+          モニターの種類や見る角度によってもかなり違って見えます。<br>
+          また、印刷物とモニターに表示される色もかなり違いがあります。</p>
+        <p class="text_2">今回は<a href="https://ja.wikipedia.org/wiki/JIS%E6%85%A3%E7%94%A8%E8%89%B2%E5%90%8D" target="_blank">Wikipedia</a>と<a href="https://www.i-iro.com/dic/tag/jis" target="_blank">カラーセラピーライフ</a>の2つのサイトから<br>
+          カラーコードのデータを取得しました。<br>
+          どちらも色合いが違いますのでしっくりくる方を選択してください。</p>
+        <ul>
+          <li>Wikipediaのカラーコード</li>
+          <li>カラーセラピーライフのカラーコード</li>
+        </ul>
+      </div>
+      <div class="area_2">
+        <p class="text_1">次に問題数を選択してからテストを開始してください。</p>
+        <ul>
+          <li>10問</li>
+          <li>20問</li>
+          <li>50問</li>
+        </ul>
+        <p class="restart">スタートに戻る</p>
+      </div>
+      <div class="area_3">
+        <div>
+          <p>第<span class="count_1"></span>問<span class="left"> （残り<span class="count_2"></span>問）</span></p>
+          <p>参照カラーコード：<span class="color_code"></span></p>
+          <p>正解数 <span class="count_3"></span></p>
+        </div>
+        <p class="text_1">この色の慣用色名は？</p>
+        <p class="result">正解！</p>
+        <ul class="question">
+          <li>
+            <p class="answer"><span></span></p>
+            <p class="name"><span class="name_1"></span><span class="name_2"></span></p>
+            <p class="detail_1"></p>
+            <p class="detail_2"></p>
+            <p class="detail_3"></p>
+          </li>
+          <li>
+            <p class="answer"><span></span></p>
+            <p class="name"><span class="name_1"></span><span class="name_2"></span></p>
+            <p class="detail_1"></p>
+            <p class="detail_2"></p>
+            <p class="detail_3"></p>
+          </li>
+          <li>
+            <p class="answer"><span></span></p>
+            <p class="name"><span class="name_1"></span><span class="name_2"></span></p>
+            <p class="detail_1"></p>
+            <p class="detail_2"></p>
+            <p class="detail_3"></p>
+          </li>
+          <li>
+            <p class="answer"><span></span></p>
+            <p class="name"><span class="name_1"></span><span class="name_2"></span></p>
+            <p class="detail_1"></p>
+            <p class="detail_2"></p>
+            <p class="detail_3"></p>
+          </li>
+        </ul>
+        <ul class="change">
+          <li class="prev">前へ</li>
+          <li class="restart">スタートに戻る</li>
+          <li class="next">次へ</li>
+        </ul>
+      </div>
+      <div class="area_4">
+        <h3>成績</h3>
+        <ul>
+          <li>問題数 <span class="count_4"></span>問</li>
+          <li>正解数 <span class="count_5"></span>問</li>
+          <li>正解率 <span class="count_6"></span>%</li>
+        </ul>
+        <p class="comment">すばらしい！</p>
+        <p class="restart">スタートに戻る</p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>JavaScript Sample</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<style>
+  *{
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    font-weight: normal;
+    line-height:1;
+    box-sizing: border-box;
+  }
+
+  body{
+    color:#111;
+    background-color: #999;
+    font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  }
+  header{
+    background: linear-gradient(135deg, #1F6ED4, #39BAE8);
+    width:100%;
+    height:70px;
+    margin:0 auto 0;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 100;
+  }
+  main{
+    background-color: #fff;
+    width:1000px;
+    min-height: 600px;
+    margin:70px auto 0;
+    padding: 20px;
+    position: relative;
+    z-index: 10;
+  }
+  footer{
+    background: linear-gradient(-135deg, #1F6ED4, #39BAE8);
+    width:1000px;
+    height:30px;
+    margin:0 auto 20px;
+    overflow: hidden;
+    border-radius: 0 0 10px 10px;
+  }
+  h1{
+    color:#fff;
+    width:1000px;
+    height: 70px;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 0 auto;
+    padding:20px 0 30px;
+    text-shadow: 1px 1px 1px #333;
+  }
+  h2{
+    font-weight: bold;
+    font-size: 24px;
+    margin:0 auto 10px;
+    border-left: 8px solid #1F6ED4;
+    height:30px;
+    padding: 5px 0 0 10px;
+  }
+  p{
+    line-height: 1.6;
+  }
+  footer p{
+    color:#fff;
+    text-align: center;
+    margin:3px auto 0;
+  }
+  a, a:active, a:visited{
+    color: #1F6ED4;
+    text-decoration: none;
+  }
+  a:hover{
+    color: #1F6ED4;
+    text-decoration: underline;
+  }
+  textarea{
+    vertical-align: top;
+  }
+  img{
+    vertical-align: bottom;
+  }
+</style>
+<style>
+  .animation{
+    width: 500px;
+    height: 300px;
+    margin:0 auto;
+    text-align: center;
+  }
+  .count{
+    font-size: 200px;
+  }
+  .link{
+    margin-top:100px;
+  }
+</style>
+
+
+  <title>SessionStrage その1</title>
+</head>
+<body>
+  <header>
+    <h1>SessionStrage その1</h1>
+  </header>
+  <main>
+    <div class="animation">
+      <p class="count"></p>
+      <p class="link"><a href="index2.html">その2へ進む</a></p>
+    </div>
+  </main>
+  <footer>
+    <p>JavaScript Sample</p>
+  </footer>
+</body>
+<script>
+
+const e_count = document.querySelector('.count');
+const e_link = document.querySelector('.link');
+
+// カウントダウンを行う
+const func_count = (i_limit) => {
+  // 引数から何秒実行するか取得
+  let i_count = i_limit;
+  // interval_IDをインターバルIDとして1秒ごとに実行
+  const interval_ID = setInterval(() => {
+    // カウントが0になった場合
+    if(i_count === 0){
+      // インターバルを解除
+      clearInterval(interval_ID);
+      // カウントを非表示にしてリンクを表示させる
+      e_count.style.display = 'none';
+      e_link.style.display = 'block';
+    }
+    // 現在のカウントを表示
+    e_count.textContent = i_count;
+    // カウントダウン
+    i_count--;
+  }, 1000);
+}
+
+// 初期化を行う
+const func_init = () => {
+  // セッションストレージの値が'storageKey'から呼び出せた場合
+  if(sessionStorage.getItem('storageKey')){
+    // カウントを非表示にしてリンクを表示させる
+    e_count.style.display = 'none';
+    e_link.style.display = 'block';
+  }
+  else{
+    // カウントを表示させリンクを非表示にする
+    e_link.style.display = 'none';
+    e_count.style.display = 'block';
+    // カウントダウンを行う（ここでは5秒）
+    func_count(5);
+    // セッションストレージの値を'storageKey'に'storageValue'として保存させる
+    sessionStorage.setItem('storageKey', 'storageValue');
+  }
+}
+func_init();
+
+</script>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+  <title>多階層ドロップダウンメニュー＋リンク内容表示（モダンブラウザ用）</title>
+</head>
+<body>
+  <header>
+    <h1>多階層ドロップダウンメニュー＋リンク内容表示（モダンブラウザ用）</h1>
+    <nav>
+      <ul class="main_menu">
+        <li>
+          <a href="#menu01">メニュー01</a>
+          <div class="underline"></div>
+          <ul class="sub_menu">
+            <li><a href="#menu01_01">メニュー01_01</a></li>
+            <li>
+              <a href="#menu01_02">メニュー01_02</a>
+              <ul class="side_menu">
+                <li><a href="#menu01_02_01">メニュー01_02_01</a></li>
+                <li><a href="#menu01_02_02">メニュー01_02_02</a></li>
+                <li><a href="#menu01_02_03">メニュー01_02_03</a></li>
+              </ul>
+            </li>
+            <li><a href="#menu01_03">メニュー01_03</a></li>
+            <li><a href="#menu01_04">メニュー01_04</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#menu02">メニュー02</a>
+          <div class="underline"></div>
+          <ul class="sub_menu">
+            <li>
+              <a href="#menu02_01">メニュー02_01</a>
+              <ul class="side_menu">
+                <li><a href="#menu02_01_01">メニュー02_01_01</a></li>
+                <li><a href="#menu02_01_02">メニュー02_01_02</a></li>
+              </ul>
+            </li>
+            <li><a href="#menu02_02">メニュー02_02</a></li>
+            <li><a href="#menu02_03">メニュー02_03</a></li>
+            <li>
+              <a href="#menu02_04">メニュー02_04</a>
+              <ul class="side_menu">
+                <li><a href="#menu02_04_01">メニュー02_04_01</a></li>
+                <li><a href="#menu02_04_02">メニュー02_04_02</a></li>
+                <li><a href="#menu02_04_03">メニュー02_04_03</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#menu03">メニュー03</a>
+          <div class="underline"></div>
+          <ul class="sub_menu">
+            <li><a href="#menu03_01">メニュー03_01</a></li>
+            <li><a href="#menu03_02">メニュー03_02</a></li>
+            <li><a href="#menu03_03">メニュー03_03</a></li>
+            <li>
+              <a href="#menu03_04">メニュー03_04</a>
+              <ul class="side_menu">
+                <li>
+                  <a href="#menu03_04_01">メニュー03_04_01</a>
+                  <ul class="side_menu">
+                    <li><a href="#menu03_04_01_01">メニュー03_04_01_01</a></li>
+                    <li><a href="#menu03_04_01_02">メニュー03_04_01_02</a></li>
+                    <li><a href="#menu03_04_01_03">メニュー03_04_01_03</a></li>
+                    <li><a href="#menu03_04_01_04">メニュー03_04_01_04</a></li>
+                    <li><a href="#menu03_04_01_05">メニュー03_04_01_05</a></li>
+                  </ul>
+                </li>
+                <li><a href="#menu03_04_02">メニュー03_04_02</a></li>
+                <li><a href="#menu03_04_03">メニュー03_04_03</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#menu04">メニュー04</a>
+          <div class="underline"></div>
+          <ul class="sub_menu">
+            <li><a href="#menu04_01">メニュー04_01</a></li>
+            <li><a href="#menu04_02">メニュー04_02</a></li>
+            <li>
+              <a href="#menu04_03">メニュー04_03</a>
+              <ul class="side_menu">
+                <li><a href="#menu04_03_01">メニュー04_03_01</a></li>
+                <li>
+                  <a href="#menu04_03">メニュー04_03_02</a>
+                  <ul class="side_menu">
+                    <li><a href="#menu04_03_02_01">メニュー04_03_02_01</a></li>
+                    <li><a href="#menu04_03_02_02">メニュー04_03_02_02</a></li>
+                    <li><a href="#menu04_03_02_03">メニュー04_03_02_03</a></li>
+                  </ul>
+                </li>
+                <li><a href="#menu04_03_03">メニュー04_03_03</a></li>
+                <li><a href="#menu04_03_04">メニュー04_03_04</a></li>
+                <li><a href="#menu04_03_05">メニュー04_03_05</a></li>
+              </ul>
+            </li>
+            <li><a href="#menu04_04">メニュー04_04</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#menu05">メニュー05</a>
+          <div class="underline"></div>
+          <ul class="sub_menu">
+            <li><a href="#menu05_01">メニュー05_01</a></li>
+            <li><a href="#menu05_02">メニュー05_02</a></li>
+            <li><a href="#menu05_03">メニュー05_03</a></li>
+            <li><a href="#menu05_04">メニュー05_04</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2>ドロップダウンメニュー＋リンク内容表示</h2>
+    <p class="mt20">上部のメニューにカーソルを置くと下位のメニューがアニメーションして表示される。<br>
+      更に下位のメニューがあるものもある。<br>
+      クリックすると下にメニュー名とリンク先の文字列が表示される。</p>
+  </main>
+  <footer>
+    <p>JavaScript Sample</p>
+  </footer>
+</body>
+</html>

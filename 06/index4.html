@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+  <title>横スクロールメニュー</title>
+</head>
+<body>
+  <header>
+    <h1>横スクロールメニュー</h1>
+  </header>
+  <nav class="nav-wrap">
+    <div class="scroll-nav" id="js-nav">
+      <ul>
+        <li><a href="index.html">メニュー1</a></li>
+        <li><a href="index2.html">メニュー2</a></li>
+        <li><a href="index3.html">メニュー3</a></li>
+        <li><a href="index4.html">メニュー4</a></li>
+        <li><a href="index5.html">メニュー5</a></li>
+        <li><a href="index6.html">メニュー6</a></li>
+        <li><a href="index7.html">メニュー7</a></li>
+      </ul>
+    </div>
+  </nav>
+  <main>
+    <h2>ページ4</h2>
+    <p class="mt20">幅をSPサイズに狭くすると上部のメニューは横スクロールになります。</br>
+      メニューをクリックして次のページに飛んでもメニューの座標も引き継がれて初期化されません。</br>
+      なお、スクロールすると下に座標が表示されます。</p>
+    <p class="mt20">横スクロール座標</p>
+    <output id="js-display" class="mt20 ml30"></output>
+  </main>
+  <footer>
+    <p>JavaScript Sample</p>
+  </footer>
+</body>
+</html>

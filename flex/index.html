@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+  <title>フォームの内容を表示</title>
+</head>
+<body>
+  <header>
+    <h1>フォームの内容を表示</h1>
+  </header>
+  <main>
+    <h2>フォーム入力</h2>
+    <p class="mt20">フォームに入力した内容が別ウィンドウで表示されれます。<br>
+      入力に不備があるとある一定の警告が出ます。</p>
+    <form id="i_form" class="mt20 ml20" method="get" action="index2.html">
+      <div class="c_text">
+        <div class="form_parts">
+          <label for="i_text" class="label_1">テキスト</label><input type="text" id="i_text" class="textInput" name="n_text" placeholder="一行文字列を入力">
+        </div>
+        <output class="ml30"></output>
+      </div>
+      <div class="c_tel">
+        <div class="form_parts">
+          <label for="i_tel" class="label_1">電話番号</label><input type="tel" id="i_tel" class="textInput" name="n_tel" placeholder="xxx-xxx-xxx">
+        </div>
+        <output class="ml30"></output>
+      </div>
+      <div class="c_email">
+        <div class="form_parts">
+          <label for="i_email" class="label_1">Eメール</label><input type="email" id="i_email" class="textInput" name="n_email" inputmode="email" placeholder="xxx@xxx.xx.xx">
+        </div>
+        <output class="ml30"></output>
+      </div>
+      <div class="c_checkbox">
+        <fieldset class="form_parts">
+          <legend class="mb10">チェックボックス</legend>
+          <div><label class="label_2"><input type="checkbox" id="i_checkbox1" name="n_checkbox" value="チェック1">チェック1</label></div>
+          <div><label class="label_2"><input type="checkbox" id="i_checkbox2" name="n_checkbox" value="チェック2">チェック2</label></div>
+          <div><label class="label_2"><input type="checkbox" id="i_checkbox3" name="n_checkbox" value="チェック3">チェック3</label></div>
+          <div><label class="label_2"><input type="checkbox" id="i_checkbox4" name="n_checkbox" value="チェック4">チェック4</label></div>
+        </fieldset>
+      </div>
+      <div class="c_radio">
+        <fieldset class="form_parts">
+          <legend class="mb10">ラジオボタン</legend>
+          <div><label class="label_2"><input type="radio" id="i_radio1" name="n_radio" value="ラジオ1">ラジオ1</label></div>
+          <div><label class="label_2"><input type="radio" id="i_radio2" name="n_radio" value="ラジオ2">ラジオ2</label></div>
+          <div><label class="label_2"><input type="radio" id="i_radio3" name="n_radio" value="ラジオ3">ラジオ3</label></div>
+          <div><label class="label_2"><input type="radio" id="i_radio4" name="n_radio" value="ラジオ4">ラジオ4</label></div>
+        </fieldset>
+        <output class="ml30 mt20"></output>
+      </div>
+      <div class="c_select">
+        <div class="form_parts">
+          <label for="i_select" class="label_3">プルダウンメニュー</label>
+          <select id="i_select" name="n_select">
+            <option value="">-</option>
+            <option value="プルダウン1">プルダウン1</option>
+            <option value="プルダウン2">プルダウン2</option>
+            <option value="プルダウン3">プルダウン3</option>
+            <option value="プルダウン4">プルダウン4</option>
+          </select>
+        </div>
+        <output class="ml30"></output>
+      </div>
+      <div class="c_textarea">
+        <div class="form_parts">
+          <label for="i_textarea" class="label_3">テキストエリア</label><textarea id="i_textarea" class="textInput" name="n_textarea" cols="45" rows="7" placeholder="複数行文字列を入力"></textarea>
+        </div>
+        <output class="ml30"></output>
+      </div>
+      <div class="buttons">
+        <input type="submit" id="i_submit" name="n_submit" value="HTMLのsubmitで送信する" disabled>
+        <input type="button" id="i_location" name="n_location" value="JSのlocationで送信する" disabled>
+        <input type="button" id="i_dialog" name="n_dialog" value="ダイアログに表示する">
+        <input type="reset" id="i_reset" name="n_reset" value="リセット">
+      </div>
+      <div class="flextest">
+        <p class="test1">あばば</p>
+        <p class="test2">ぶひひひひひひひひ</p>
+        <p class="test3">ぐへへへへへへへへ</p>
+        <p class="test4">ばわ</p>
+      </div>
+    </form>
+  </main>
+  <footer>
+    <p>JavaScript Sample</p>
+  </footer>
+</body>
+</html>

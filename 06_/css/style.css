@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+input, select, textarea{
+  background-color: #fdfdfd;
+  border: 1px solid #333;
+  margin:0 0 0 20px;
+  padding:5px;
+  font-size: 16px;
+}
+fieldset div{
+  display: inline;
+}
+output{
+  color: #dc143c;
+}
+output p::before{
+  content:"！";
+  color:#fff;
+  background-color:#dc143c;
+  font-weight: bold;
+  font-size:15px;
+  margin-right:8px;
+  padding:0 3px;
+}
+.c_text,
+.c_tel,
+.c_email,
+.c_checkbox,
+.c_radio,
+.c_select,
+.c_textarea{
+  display: flex;
+  margin:20px 0 0;
+}
+.c_text input{
+  height: 30px;
+  width: 400px;
+}
+.c_tel input,
+.c_email input{
+  height: 30px;
+  width: 200px;
+}
+select{
+  width: 150px;
+}
+div.form_parts{
+  display: flex;
+}
+.label_1{
+  display:block;
+  width: 70px;
+  margin: 7px 0 0;
+}
+.label_2 input{
+  margin:0 5px 0 20px;
+}
+.label_3{
+  width:150px;
+  margin: 7px 0 0;
+}
+textarea{
+  /* フォントが違ったりIEでサイズがおかしくなるので個別に設定 */
+  font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  width:450px;
+  height: 120px;
+}
+.buttons{
+  margin:30px 0 0;
+}
+.buttons input{
+  padding: 10px;
+  background-color: #eee;
+  border: 2px outset #999;
+  cursor: pointer;
+}

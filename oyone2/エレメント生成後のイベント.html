@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+// オープンボタンを押したときにクローズボタンが生成される。
+// 二回目以降のオープンボタンとクローズボタンは押しても押したというconsole.logが表示されるだけだが
+// オープンのクリックで生成されたクローズのイベントを設定する方法で悩んでいる。
+
+
+// 本来やりたいこと。外部で宣言だけしたcloseButtonにopenButtonを押したときに実際に中身を持たせて
+// openButtonのクリックイベントの外にcloseButtonのクリックイベントを作る。
+// 実際は実態がないcloseButtonにイベントをつけているのでエラーが発生。
+/*
+$(function(){
+  $('<p class="openButton"><a href="">オープン</a></p>').appendTo('main');
+  var openButton = $('.openButton');
+  var closeButton;
+  openButton.on('click', 'a', function(){
+    console.log('オープンを押した');
+    if(!openButton.hasClass('on')){
+      console.log('最初の一回');
+      openButton.addClass('on');
+      $('<p class="closeButton"><a href="">クローズ</a></p>').appendTo('main');
+      closeButton = $('.closeButton');
+    }
+    return false;
+  });
+  closeButton.on('click', 'a', function(){
+    console.log('クローズを押した');
+    return false;
+  });
+});
+*/
+
+// 代替案1。openButtonのクリックイベント内でcloseButtonの宣言と挿入とクリックイベントをすべて作成
+// これで起動するがどんどん複雑化するのでやりたくない
+/*
+$(function(){
+  $('<p class="openButton"><a href="">オープン</a></p>').appendTo('main');
+  var openButton = $('.openButton');
+  openButton.on('click', 'a', function(){
+    console.log('オープンを押した');
+    if(!openButton.hasClass('on')){
+      console.log('最初の一回');
+      openButton.addClass('on');
+      $('<p class="closeButton"><a href="">クローズ</a></p>').appendTo('main');
+      var closeButton = $('.closeButton');
+      closeButton.on('click', 'a', function(){
+        console.log('クローズを押した');
+        return false;
+      });
+    }
+    return false;
+  });
+});
+*/
+
+// 代替案2。closeButtonの外側だけ実際に作成して、openButtonクリックイベントで中身を挿入。
+// これだとcloseButtonのイベントを外側に出せるが、
+// closeButtonの外側だけ予め作成しないといけないのであまりやりたくない。
+
+$(function(){
+  $('<p class="openButton"><a href="">オープン</a></p>').appendTo('main');
+  var openButton = $('.openButton');
+  $('<p class="closeButton"></p>').appendTo('main');
+  var closeButton = $('.closeButton');
+  openButton.on('click', 'a', function(){
+    console.log('オープンを押した');
+    if(!openButton.hasClass('on')){
+      console.log('最初の一回');
+      openButton.addClass('on');
+      $('<a href="">クローズ</a>').appendTo(closeButton);
+    }
+    return false;
+  });
+  closeButton.on('click', 'a', function(){
+    console.log('クローズを押した');
+    return false;
+  });
+});
+
+</script>
+  <title>生成されたボタン内に関数を作る</title>
+</head>
+<body>
+  <main>
+  </main>
+</body>
+</html>

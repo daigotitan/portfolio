@@ -1,0 +1,73 @@
+@charset "UTF-8";
+body{
+  position: relative;
+}
+main{
+  width: 100%;
+  max-width:1000px;
+  min-width:300px;
+
+}
+
+footer{
+  width: 100%;
+  max-width:1000px;
+  min-width:300px;
+}
+
+.nav-wrap {
+  position: relative;
+  top: 70px;
+}
+.scroll-nav {
+  width: 100%;
+  max-width:1000px;
+  min-width:300px;
+  background: #555; /* メニューの背景色 */
+  overflow-x: auto;
+  margin:0 auto;
+  -webkit-overflow-scrolling: touch; /* 慣性スクロール */
+}
+.scroll-nav ul {
+  width: 800px;
+
+  margin: 0 auto;
+  list-style: none;
+  padding-right: 25px; /* 右側の固定分余白を空ける */
+}
+.scroll-nav ul li {
+  float: left;
+ 
+  text-align: center;
+}
+
+.scroll-nav ul li a {
+  height: 60px;
+  padding:20px 0;
+  width: 110px; /* メニューの個別の幅 */
+  display: inline-block;
+  color: #fff; /* メニューの文字色 */
+  text-decoration: none;
+}
+
+.scroll-nav ul li a.is-active {
+  background: #fff; 
+  color: #555;
+}
+.scroll-nav ul li a:hover,
+.scroll-nav ul li a.is-active:hover {
+  color:#fff;
+  background: #222; マウスホバー時の背景色
+}
+.next-btn { /* 右側に固定する部分 */
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25px; /* 固定部分の幅 */
+  height: 60px; /* メニューの高さに合わせる */
+  line-height: 40px;
+  background: #fff;
+  color: #555;
+}
+
+

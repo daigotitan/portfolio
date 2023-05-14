@@ -1,0 +1,117 @@
+@charset "UTF-8";
+
+.jankenman{
+  width:800px;
+  margin:20px auto;
+  padding:10px 0;
+  background-color: #ccc;
+}
+.message{
+  background-color: #000;
+  width:600px;
+  height: 60px;
+  border: 2px solid #333;
+  margin: 20px auto;
+  padding:5px 0 0 10px;
+}
+.message p{
+  color: #fff;
+  font-weight: bold;
+  font-size: 32px;
+}
+.display_area{
+  width:359px;
+  height:322px;
+  position: relative;
+  margin:20px auto;
+}
+.result{
+  width:359px;
+  height:322px;
+  position: absolute;
+}
+.lamp{
+  background-image: url(../img/lamp_base.png);
+  background-repeat: no-repeat;
+  width:302px;
+  height: 302px;
+  position: absolute;
+  top:30px;
+  left:29px;
+}
+.lamp.normal img{
+  animation-name: anim_normal;
+  animation-duration: 12s;
+  animation-timing-function: steps(12);
+  animation-iteration-count: infinite;
+}
+.lamp.battle img{
+  animation-name: anim_battle;
+  animation-duration: 1s;
+  animation-timing-function: steps(12);
+  animation-iteration-count: infinite;
+}
+@keyframes anim_normal {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+/* 本来なら同じ内容のキーなので名前を分ける必要はないのだがIEではわけないと反応しないため */
+@keyframes anim_battle {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.monitor{
+  width:200px;
+  height: 200px;
+  position: absolute;
+  top:85px;
+  left:78px;
+}
+.button_area{
+  position: relative;
+}
+.select_area{
+  display:flex;
+  justify-content: space-around;
+  width:300px;
+  height:100px;
+  border: 2px solid #999;
+  margin:30px 0 0 100px;
+  padding:7px 0 0;
+}
+.select_area p{
+  width:80px;
+  height:80px;
+  padding:4px 0 0 4px;
+  background-color: #999;
+  border-radius: 40px;
+  cursor: auto;
+  border: 1px solid #333;
+}
+.select_area p.red{
+  cursor: auto;
+  background-color: #f00;
+}
+.select_area p.yellow{
+  background-color: #ff0;
+  cursor: pointer;
+}
+.button_start{
+  position: absolute;
+  top:30px;
+  left:550px;
+  width:160px;
+  height:60px;
+  padding:15px 0;
+  text-align: center;
+  border:2px solid #999;
+  background-color: #666;
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #333;
+  cursor: auto;
+}
+.button_start.on{
+  background-color: #1e90ff;
+  cursor: pointer;
+}
