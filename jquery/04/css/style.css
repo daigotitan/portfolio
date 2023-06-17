@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+ul{
+  list-style: none;
+}
+
+.hiryu,
+.choryu,
+.juryu,
+.kairyu,
+.garyu,
+.gaju,
+.koryu{
+  width: 960px;
+  margin:30px auto;
+}
+
+.head_title{
+  font-weight: bold;
+  font-size: 20px;
+}
+
+ul{
+  width: 960px;
+  display: flex;
+}
+li{
+  width: 160px;
+}
+img{
+  width: 160px;
+  border: solid 2px #fff;
+}
+.on img{
+  border: solid 2px #f00;
+}
+.buttonlist{
+  display: flex;
+  justify-content: center;
+  margin:20px auto 50px;
+}
+.buttonlist li{
+  border: 1px solid #666;
+  padding: 10px;
+  margin:0 5px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  background: linear-gradient(0deg, #ccc, #fff);
+}
+.buttonlist li.active{
+  color: #f00;
+}
+.monsterlist{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap:wrap;
+  width: 900px;
+  margin:0 auto;
+}
+.monsterlist li{
+  margin:10px;
+}
+.monsterlist img{
+  width: 160px;
+  height: 160px;
+
+}

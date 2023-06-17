@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../slick/slick.css">
+  <link rel="stylesheet" href="../slick/slick-theme.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="../slick/slick.min.js"></script>
+  <script src="js/script.js" defer></script>
+  <title>モーダルウィンドウ</title>
+</head>
+<body>
+  <header>
+    <h1>モーダルウィンドウ</h1>
+  </header>
+  <main>
+    <h2>ボタンで呼び出されるモーダルウィンドウ</h2>
+    <p class="mt20">ボタンを押すと背景が暗くなりモーダルウィンドウが表示されます。<br>
+      &#215;ボタンを押すか暗転した背景を押すと戻ります。</p>
+    <p class="modal-open" data-target="modalarea">モーダルを呼び出す。</p>
+  </main>
+  <!-- modal -->
+  <div id="modalarea" class="modal-content">
+    <dev class="modal-head">
+      <h3>モーダルウィンドウ</h3>
+      <p class="modal-close">&#215;</p>
+    </dev>
+    <div class="modal-body">
+      <p>背景が暗転し、スクロールバーが消え、スクロール不可になります。</p>
+      <p>タイトル横の&#215;ボタンや暗転した背景をクリックするとウィンドウは閉じます。</p>
+      <p>モーダルの表示位置は縦も横もブラウザーの中心になります。</p>
+    </div>
+  </div>
+  <!-- //modal -->
+  <footer>
+    <p>jQuery Sample</p>
+  </footer>
+</body>
+</html>

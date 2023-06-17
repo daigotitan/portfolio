@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="js/script.js" defer></script>
+  <title>チェックボックスの連動</title>
+</head>
+<body>
+  <header>
+    <h1>チェックボックスの連動</h1>
+  </header>
+  <main>
+    <h2>親子のチェックボックスのチェックによる相互作用</h2>
+    <p class="mt20">種族ごとに別れたモンスターハンターのモンスターリストの、種族（親）にチェックが入ると配下のモンスター（子）のすべてにチェックが入ります。<br>
+      親のチェックを外せば子のチェックはすべて外れます。<br>
+      個別に子にチェックを入れた場合親にチェックがつき、すべての子のチェックがはずれれば親のチェックも外れます。</p>
+    <div class="hiryu">
+      <p class="head_title">
+        <label>
+          <input type="checkbox" name="hiryu_0" value="飛竜種" id="hiryu_0">
+          <span>飛竜種</span>
+        </label>
+      </p>
+      <ul>
+        <li>
+          <label>
+            <input type="checkbox" name="hiryu_1" value="ベリオロス" id="hiryu_1">
+            <span>ベリオロス</span>
+            <img src="../../image/sample/berioros_s.jpg" alt="ベリオロス">
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="hiryu_2" value="ディアブロス" id="hiryu_2">
+            <span>ディアブロス</span>
+            <img src="../../image/sample/diablos_s.jpg" alt="ディアブロス">
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="hiryu_3" value="リオレウス亜種" id="hiryu_3">
+            <span>リオレウス亜種</span>
+            <img src="../../image/sample/liolaeus_s.jpg" alt="リオレウス亜種">
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="hiryu_4" value="ナルガクルガ" id="hiryu_4">
+            <span>ナルガクルガ</span>
+            <img src="../../image/sample/nargacuga_s.jpg" alt="ナルガクルガ">
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="hiryu_5" value="セルレギオス" id="hiryu_5">
+            <span>セルレギオス</span>
+            <img src="../../image/sample/selregios_s.jpg" alt="セルレギオス">
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="hiryu_6" value="ティガレックス" id="hiryu_6">
+            <span>ティガレックス</span>
+            <img src="../../image/sample/tigrex_s.jpg" alt="ティガレックス">
+          </label>
+        </li>
+      </ul>
+    </div>
+    <div class="choryu">
+      <p class="head_title">
+        <label>
+          <input type="checkbox" name="choryu_0" value="鳥竜種" id="choryu_0">
+          <span>鳥竜種</span>
+        </label>
+      </p>
+      <ul>
+        <li>
+          <label>
+            <input type="checkbox" name="choryu_1" value="クルペッコ" id="choryu_1">
+            <span>クルペッコ</span>
+            <img src="../../image/sample/qurupecco_s.jpg" alt="クルペッコ">
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="choryu_2" value="イャンガルルガ" id="choryu_2">
+            <span>イャンガルルガ</span>
+            <img src="../../image/sample/yiangaurga_s.jpg" alt="イャンガルルガ">
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="choryu_3" value="イャンクック" id="choryu_3">
+            <span>イャンクック</span>
+            <img src="../../image/sample/yiankut-ku_s.jpg" alt="イャンクック">
+          </label>
+        </li>
+      </ul>
+    </div>
+    <div class="gaju">
+      <p class="head_title">
+        <label>
+          <input type="checkbox" name="gaju_0" value="牙獣種" id="gaju_0">
+          <span>牙獣種</span>
+        </label>
+      </p>
+      <ul>
+        <li>
+          <label>
+            <input type="checkbox" name="gaju_1" value="アオアシラ" id="gaju_1">
+            <span>アオアシラ</span>
+            <img src="../../image/sample/aoashira_s.jpg" alt="アオアシラ">
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="gaju_2" value="ドスファンゴ" id="gaju_2">
+            <span>ドスファンゴ</span>
+            <img src="../../image/sample/dosfango_s.jpg" alt="ドスファンゴ">
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="gaju_3" value="ラージャン" id="gaju_3">
+            <span>ラージャン</span>
+            <img src="../../image/sample/rajang_s.jpg" alt="ラージャン">
+          </label>
+        </li>
+      </ul>
+    </div>
+    <div class="koryu">
+      <p class="head_title">
+        <label>
+          <input type="checkbox" name="koryu_0" value="古龍種" id="koryu_0">
+          <span>古龍種</span>
+        </label>
+      </p>
+      <ul>
+        <li>
+          <label>
+            <input type="checkbox" name="koryu_1" value="キリン" id="koryu_1">
+            <span>キリン</span>
+            <img src="../../image/sample/kirin_s.jpg" alt="キリン">
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="koryu_2" value="クシャルダオラ" id="koryu_2">
+            <span>クシャルダオラ</span>
+            <img src="../../image/sample/kushaladaora_s.jpg" alt="クシャルダオラ">
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="koryu_3" value="シャガルマガラ" id="koryu_3">
+            <span>シャガルマガラ</span>
+            <img src="../../image/sample/shagalmagala_s.jpg" alt="シャガルマガラ">
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="koryu_4" value="テオ・テスカトル" id="koryu_4">
+            <span>テオ・テスカトル</span>
+            <img src="../../image/sample/teotexkator_s.jpg" alt="テオ・テスカトル">
+          </label>
+        </li>
+      </ul>
+    </div>
+  </main>
+  <footer>
+    <p>jQuery Sample</p>
+  </footer>
+</body>
+</html>

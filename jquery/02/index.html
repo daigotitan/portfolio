@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../slick/slick.css">
+  <link rel="stylesheet" href="../slick/slick-theme.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="../slick/slick.min.js"></script>
+  <script src="js/script.js" defer></script>
+  <title>スライダー</title>
+</head>
+<body>
+  <header>
+    <h1>スライダー</h1>
+  </header>
+  <main>
+    <h2>プラグインのslickを使ったスライダー</h2>
+    <p class="mt20">slickを使ってモンスターハンターのモンスター画像をスライドさせます。<br>
+      上段は画像ふたつを表示させ、画像データの読み込みも遅延させています。<br>
+      下段は左右に少し表示させ、仕様上画像データの読み込み方は標準です。<br>
+      ただし、どちらも画像が表示されるまでリストが非表示になっています。</p>
+    <ul class="monsterlist slider">
+      <li class="kairyu"><img data-lazy="../../image/sample/agnaktor.jpg" alt="アグナコトル"></li>
+      <li class="gaju"><img data-lazy="../../image/sample/aoashira.jpg" alt="アオアシラ"></li>
+      <li class="hiryu"><img data-lazy="../../image/sample/berioros.jpg" alt="ベリオロス"></li>
+      <li class="juryu"><img data-lazy="../../image/sample/bracchidios.jpg" alt="ブラキディオス"></li>
+      <li class="hiryu"><img data-lazy="../../image/sample/diablos.jpg" alt="ディアブロス"></li>
+      <li class="gaju"><img data-lazy="../../image/sample/dosfango.jpg" alt="ドスファンゴ"></li>
+      <li class="juryu"><img data-lazy="../../image/sample/eviljho.jpg" alt="イビルジョー"></li>
+      <li class="koryu"><img data-lazy="../../image/sample/kirin.jpg" alt="キリン"></li>
+      <li class="koryu"><img data-lazy="../../image/sample/kushaladaora.jpg" alt="クシャルダオラ"></li>
+      <li class="kairyu"><img data-lazy="../../image/sample/lagiacrus.jpg" alt="ラギアクルス"></li>
+      <li class="hiryu"><img data-lazy="../../image/sample/liolaeus.jpg" alt="リオレウス"></li>
+      <li class="hiryu"><img data-lazy="../../image/sample/nargacuga.jpg" alt="ナルガクルガ"></li>
+      <li class="choryu"><img data-lazy="../../image/sample/qurupecco.jpg" alt="クルペッコ"></li>
+      <li class="gaju"><img data-lazy="../../image/sample/rajang.jpg" alt="ラージャン"></li>
+      <li class="hiryu"><img data-lazy="../../image/sample/selregios.jpg" alt="セルレギオス"></li>
+      <li class="koryu"><img data-lazy="../../image/sample/shagalmagala.jpg" alt="シャガルマガラ"></li>
+      <li class="koryu"><img data-lazy="../../image/sample/teotexkator.jpg" alt="テオ・テスカトル"></li>
+      <li class="hiryu"><img data-lazy="../../image/sample/tigrex.jpg" alt="ティガレックス"></li>
+      <li class="choryu"><img data-lazy="../../image/sample/yiangaurga.jpg" alt="イャンガルルガ"></li>
+      <li class="choryu"><img data-lazy="../../image/sample/yiankut-ku.jpg" alt="イャンクック"></li>
+      <li class="garyu"><img data-lazy="../../image/sample/zinogre.jpg" alt="ジンオウガ"></li>
+    </ul>
+    <ul class="monsterlist slider2">
+      <li class="kairyu"><img src="../../image/sample/agnaktor.jpg" alt="アグナコトル"></li>
+      <li class="gaju"><img src="../../image/sample/aoashira.jpg" alt="アオアシラ"></li>
+      <li class="hiryu"><img src="../../image/sample/berioros.jpg" alt="ベリオロス"></li>
+      <li class="juryu"><img src="../../image/sample/bracchidios.jpg" alt="ブラキディオス"></li>
+      <li class="hiryu"><img src="../../image/sample/diablos.jpg" alt="ディアブロス"></li>
+      <li class="gaju"><img src="../../image/sample/dosfango.jpg" alt="ドスファンゴ"></li>
+      <li class="juryu"><img src="../../image/sample/eviljho.jpg" alt="イビルジョー"></li>
+      <li class="koryu"><img src="../../image/sample/kirin.jpg" alt="キリン"></li>
+      <li class="koryu"><img src="../../image/sample/kushaladaora.jpg" alt="クシャルダオラ"></li>
+      <li class="kairyu"><img src="../../image/sample/lagiacrus.jpg" alt="ラギアクルス"></li>
+      <li class="hiryu"><img src="../../image/sample/liolaeus.jpg" alt="リオレウス"></li>
+      <li class="hiryu"><img src="../../image/sample/nargacuga.jpg" alt="ナルガクルガ"></li>
+      <li class="choryu"><img src="../../image/sample/qurupecco.jpg" alt="クルペッコ"></li>
+      <li class="gaju"><img src="../../image/sample/rajang.jpg" alt="ラージャン"></li>
+      <li class="hiryu"><img src="../../image/sample/selregios.jpg" alt="セルレギオス"></li>
+      <li class="koryu"><img src="../../image/sample/shagalmagala.jpg" alt="シャガルマガラ"></li>
+      <li class="koryu"><img src="../../image/sample/teotexkator.jpg" alt="テオ・テスカトル"></li>
+      <li class="hiryu"><img src="../../image/sample/tigrex.jpg" alt="ティガレックス"></li>
+      <li class="choryu"><img src="../../image/sample/yiangaurga.jpg" alt="イャンガルルガ"></li>
+      <li class="choryu"><img src="../../image/sample/yiankut-ku.jpg" alt="イャンクック"></li>
+      <li class="garyu"><img src="../../image/sample/zinogre.jpg" alt="ジンオウガ"></li>
+    </ul>
+  </main>
+  <footer>
+    <p>jQuery Sample</p>
+  </footer>
+</body>
+</html>

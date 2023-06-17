@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+ul{
+  list-style: none;
+}
+
+.slider,
+.slider2{
+  margin: 50px auto;
+  width: 80%;
+  opacity: 0;
+  transition: 3s;
+}
+.slider img,
+.slider2 img{
+  height: auto;
+  width: 100%;
+}
+/*slick setting*/
+.slick-prev:before,
+.slick-next:before {
+  color: #000;
+}
+.slick-initialized{
+  opacity: 1;
+}
